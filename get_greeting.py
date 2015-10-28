@@ -6,7 +6,7 @@ import ConfigParser
 
 Config=ConfigParser.ConfigParser()
 try:
-  Config.read('alarm.config')
+  Config.read('local.config')
 except:
   raise Exception('Sorry, Failed reading alarm.config file.')
 

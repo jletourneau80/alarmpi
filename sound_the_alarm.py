@@ -5,10 +5,11 @@ import subprocess
 import time
 import textwrap
 
-
 Config=ConfigParser.ConfigParser()
+Local=ConfigParser.ConfigParser()
 try:
   Config.read('alarm.config')
+  Local.read('local.config')
 except:
   raise Exception('Sorry, Failed reading alarm.config file.')
 
@@ -84,3 +85,4 @@ if Config.get('main','music') == str(1):
 if Config.get('main','light') == str(1):
   time.sleep(int(Config.get('main','lightdelay')));
   print subprocess.call ('python lightoff_1.py', shell=True)
+
