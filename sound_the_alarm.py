@@ -8,8 +8,8 @@ import textwrap
 Config=ConfigParser.ConfigParser()
 Local=ConfigParser.ConfigParser()
 try:
-  Config.read('alarm.config')
-  Local.read('local.config')
+  Config.read('/home/pi/alarmpi/alarm.config')
+  Local.read('/home/pi/alarmpi/local.config')
 except:
   raise Exception('Sorry, Failed reading alarm.config file.')
 
